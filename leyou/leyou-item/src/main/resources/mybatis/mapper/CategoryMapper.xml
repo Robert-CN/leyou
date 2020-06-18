@@ -12,11 +12,11 @@
 
     <select id="findCategoryList" resultMap="categoryMap">
         SELECT
-          id        c_id,
-          `name`    c_name,
-          parent_id  c_parent_id,
-          is_parent  c_is_parent,
-          sort      c_sort
+          id          c_id,
+          `name`      c_name,
+          parent_id   c_parent_id,
+          is_parent   c_is_parent,
+          sort        c_sort
         FROM tb_category
         WHERE parent_id = #{pid}
     </select>

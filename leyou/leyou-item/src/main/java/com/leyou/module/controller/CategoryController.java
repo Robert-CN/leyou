@@ -3,10 +3,7 @@ package com.leyou.module.controller;
 import com.leyou.module.service.CategoryService;
 import com.leyou.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author Robert
@@ -21,7 +18,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/list")
-    public Result list(Integer pid){
+    public Result findCategoryList(@RequestParam(required = true) Integer pid) {
         return categoryService.findCategoryList(pid);
     }
 }

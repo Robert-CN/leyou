@@ -8,5 +8,7 @@ import com.leyou.result.Result;
  * @Desc TODO
  **/
 public interface BrandService {
-    Result findBrandList();
+    Result findBrandList(Integer page, Integer size, String sortBy, Boolean desc, String search);
+
+    Result save(String name, String letter, String image, String categoryId);
 }

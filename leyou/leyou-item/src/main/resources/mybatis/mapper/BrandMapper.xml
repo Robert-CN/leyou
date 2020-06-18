@@ -8,4 +8,26 @@
         <result property="image" column="b_image"/>
         <result property="letter" column="b_letter"/>
     </resultMap>
+    <insert id="save">
+        INSERT tb_category_brand VALUES
+        <foreach collection="categoryIds" item="categoryId" separator=",">
+            (#{categoryId},#{brandId})
+        </foreach>
+    </insert>
+    <select id="findBrandList" resultMap="brandMap">
+        SELECT
+          id         b_id,
+          `name`     b_name,
+          image      b_image,
+          letter     b_letter
+        FROM tb_brand
+        <where>
+            <if test="search != null and search != ''">
+                AND `name` LIKE CONCAT('%',#{search},'%') OR letter = #{search}
+            </if>
+        </where>
+        <if test="sortBy != null and sortBy != '' and isDesc != null and isDesc != ''">
+              ORDER  BY  #{sortBy}   #{isDesc}
+        </if>
+    </select>
 </mapper>

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.*;
 
@@ -20,6 +21,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Brand {
     @Id
+    @KeySql(useGeneratedKeys = true)
     private Long id;
     @Column(name = "name")
     private String name;

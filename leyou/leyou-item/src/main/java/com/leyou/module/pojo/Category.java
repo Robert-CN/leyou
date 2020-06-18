@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.*;
 
@@ -15,11 +16,12 @@ import javax.persistence.*;
 @Data
 @Builder
 @Entity
-@Table(name = "tb_category",indexes = {@Index(columnList = "id")})
+@Table(name = "tb_category", indexes = {@Index(columnList = "id")})
 @AllArgsConstructor
 @NoArgsConstructor
 public class Category {
     @Id
+    @KeySql(useGeneratedKeys = true)
     private Long id;
     @Column(name = "name")
     private String name;
