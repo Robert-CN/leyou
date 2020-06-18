@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leyou.module.mapper.CategoryMapper">
+    <resultMap id="categoryMap" type="com.leyou.module.pojo.Category">
+        <id property="id" column="c_id"/>
+        <result property="name" column="c_name"/>
+        <result property="parentId" column="c_parent_id"/>
+        <result property="isParent" column="c_is_parent"/>
+        <result property="sort" column="c_sort"/>
+    </resultMap>
+
+    <select id="findCategoryList" resultMap="categoryMap">
+        SELECT
+          id        c_id,
+          `name`    c_name,
+          parent_id  c_parent_id,
+          is_parent  c_is_parent,
+          sort      c_sort
+        FROM tb_category
+        WHERE parent_id = #{pid}
+    </select>
+</mapper>
