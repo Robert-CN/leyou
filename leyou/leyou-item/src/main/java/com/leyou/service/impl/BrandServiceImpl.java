@@ -1,12 +1,12 @@
-package com.leyou.module.service.impl;
+package com.leyou.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.leyou.module.mapper.BrandMapper;
-import com.leyou.module.pojo.Brand;
-import com.leyou.module.service.BrandService;
+import com.leyou.mapper.BrandMapper;
+import com.leyou.pojo.Brand;
 import com.leyou.result.Result;
 import com.leyou.result.Results;
+import com.leyou.service.BrandService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

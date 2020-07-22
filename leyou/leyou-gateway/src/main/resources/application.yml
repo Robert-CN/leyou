@@ -24,4 +24,8 @@ zuul:
   retryable: true
   routes:
     item-server: /item/**
+    upload-server: /upload/**
+      #serviceId: upload-server
+      #path: /upload/**
+      #strip-prefix: true
   prefix: /api

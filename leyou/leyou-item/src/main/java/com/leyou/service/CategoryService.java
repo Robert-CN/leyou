@@ -1,4 +1,4 @@
-package com.leyou.module.service;
+package com.leyou.service;
 
 import com.leyou.result.Result;
 

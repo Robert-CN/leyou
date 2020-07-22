@@ -1,6 +1,6 @@
-package com.leyou.module.mapper;
+package com.leyou.mapper;
 
-import com.leyou.module.pojo.Category;
+import com.leyou.pojo.Category;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 

@@ -9,6 +9,6 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @Desc TODO
  **/
 @Configuration
-@MapperScan(basePackages = "com.leyou.module.mapper")
+@MapperScan(basePackages = "com.leyou.mapper")
 public class MapperConfig {
 }

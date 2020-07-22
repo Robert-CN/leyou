@@ -1,4 +1,4 @@
-package com.leyou.module.pojo;
+package com.leyou.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,17 +16,19 @@ import javax.persistence.*;
 @Data
 @Builder
 @Entity
-@Table(name = "tb_brand",indexes = {@Index(columnList = "id")})
+@Table(name = "tb_category", indexes = {@Index(columnList = "id")})
 @AllArgsConstructor
 @NoArgsConstructor
-public class Brand {
+public class Category {
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
     @Column(name = "name")
     private String name;
-    @Column(name = "image")
-    private String image;
-    @Column(name = "letter")
-    private String letter;
+    @Column(name = "parent_id")
+    private Long parentId;
+    @Column(name = "is_parent")
+    private Integer isParent;
+    @Column(name = "sort")
+    private Integer sort;
 }

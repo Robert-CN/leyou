@@ -8,7 +8,8 @@ package com.leyou.result;
 public enum Tips {
     SUCCESS(200,"成功"),
     FAILURE(400,"失败"),
-    PRICE_ERROR("价格错误")
+    INVALID_FILE_TYPE("无效的文件类型"),
+    FILE_UPLOAD_ERROR("文件上传失败")
     ;
     public Integer code;
     public String msg;

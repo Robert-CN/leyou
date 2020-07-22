@@ -1,10 +1,10 @@
-package com.leyou.module.service.impl;
+package com.leyou.service.impl;
 
-import com.leyou.module.mapper.CategoryMapper;
-import com.leyou.module.pojo.Category;
-import com.leyou.module.service.CategoryService;
+import com.leyou.mapper.CategoryMapper;
+import com.leyou.pojo.Category;
 import com.leyou.result.Result;
 import com.leyou.result.Results;
+import com.leyou.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

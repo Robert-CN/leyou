@@ -1,7 +1,7 @@
-package com.leyou.module.controller;
+package com.leyou.controller;
 
-import com.leyou.module.service.BrandService;
 import com.leyou.result.Result;
+import com.leyou.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
